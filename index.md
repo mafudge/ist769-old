@@ -8,8 +8,8 @@ This course provides a tour of relational, document, key-value, columnar, search
 
 Unit | Topic
 -----|-----
-A | Introduction / Relational
-B | NoSQL
+A | Reviewing and Reviewing Relational
+B | NoSQL Foundations
 C | Hadoop
 D | Spark
 E | Schema-Free SQL
@@ -19,3 +19,28 @@ H | Key-Value Models
 I | Graph Models
 J | Search Engine Models
 K | Streaming Models
+
+
+## Unit A - Reviewing and Reviewing Relational
+
+### Goals
+
+- Go over the syllabus, meet and greet, class set  expectations 
+- Review the key concepts (pun intended) from relational
+  - ACID / Transactions
+  - Aggregates, window functions
+  - Indexing
+  - Application layers
+- Get docker and git installed and working
+
+### Pre-Class Readings
+
+- dsahfgkasjdhg
+
+### In-Class Content
+
+- sadjhgfkjhasgdjkf
+
+### After Class Content
+
+- sdakljfghkljasdh

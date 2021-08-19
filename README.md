@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## IST769: README
 
 You can use the [editor on GitHub](https://github.com/mafudge/ist769/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 

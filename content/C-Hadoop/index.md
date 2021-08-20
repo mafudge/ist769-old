@@ -2,8 +2,8 @@
 
 ## Goals
 
-- Hadoop history and fundamentals 
-- Base tools: HDFS, Map-Reduce, YARN 
+- Hadoop history and fundamentals  
+- Base tools: HDFS, Map-Reduce, YARN  
 - Hadoop databases: Hive, Hcatalog, Impala, Hbase  
 
 ## Pre-Class Readings

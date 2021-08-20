@@ -19,11 +19,13 @@
 
 ## In-Class Content
 
-- Class Slides
+- Class Slides: [A-Intro.pptx](A-Intro.pptx)
 
 ## After Class Content
 
+Get your computer setup for this course: 
+
 - Install git [https://git-scm.com/](https://git-scm.com/)
 - Install Docker Desktop [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
-  - NOTE: Windows users must use the Hyper-V version not WSL2.
-- Clone the class git repository: TODO
+  - NOTE: Windows users must use Hyper-V version not WSL2. To Install Hyper-V: [https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
+- [Clone the class git repository](git.md) 

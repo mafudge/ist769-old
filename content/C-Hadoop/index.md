@@ -15,8 +15,9 @@
 
 ## In-Class Content
 
-- sadjhgfkjhasgdjkf
+- Slides
 
 ## After Class Content
 
-- sdakljfghkljasdh
+- Complete Lab-C
+- Turn in Homework (See Blackboard Details)

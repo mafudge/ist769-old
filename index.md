@@ -18,3 +18,5 @@ H | Key-Value Models
 I | Graph Models
 J | Search Engine Models
 K | Streaming Models
+
+[The NoSQL Guide](nosql.md)

@@ -7,11 +7,10 @@
 - Hadoop databases: Hive, Hcatalog, Impala, Hbase  
 
 ## Pre-Class Readings
+- [30- min video] [What is Hadoop? - YouTube!](https://www.youtube.com/watch?v=iANBytZ26MI)
+- [7 min read] [Hadoop is dead. Long live hadoop. - Medium](https://medium.com/@acmurthy/hadoop-is-dead-long-live-hadoop-f22069b264ac)
+- [7 min read] [Don't use Hadoop - your data isn't that big - chrisstucchio.com](https://www.chrisstucchio.com/blog/2013/hadoop_hatred.html)
 
-- [8 min video] [The CAP theorem - YouTube!](https://www.youtube.com/watch?v=k-Yaq8AHlFA)
-- [6 min read] [ACID vs BASE - luminousmen.com ](https://luminousmen.com/post/acid-vs-base-comparison-of-two-design-philosophies)
-- [10 min video] [7 Database Paradigms - fireship.io](https://fireship.io/lessons/top-seven-database-paradigms/)
-- [3 min read] [What is polyglot persistence? - jamesserra.com](https://www.jamesserra.com/archive/2015/07/what-is-polyglot-persistence/)
 
 ## In-Class Content
 

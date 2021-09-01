@@ -53,4 +53,4 @@ Don't fret! You can always delete the current folder and then clone it again, or
 $ git clone https://github.com/mafudge/ist769 ist769v2
 ```
 
-NOTE: we are no longer in the `ist769` folder: `ist769$ cd ..` to move up a folder.
+**NOTE:** we are no longer in the `ist769` folder: `ist769$ cd ..` to move up a folder.

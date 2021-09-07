@@ -42,9 +42,10 @@ ist769$ git stash --include-untracked
 The stash will store your changes elsewhere and if needed they can always be recovered.
 
 **I need to get updated files from the remote repository!**  
-Throughout the semester you might be asked to get updated files that your instructor has posted to github. To do this, execute a pull.
+Throughout the semester you might be asked to get updated files that your instructor has posted to github. To do this, execute:
 ```
-ist769$ git pull
+ist769$ git fetch --all`
+ist769$ git reset --hard origin/main` 
 ```
 
 **I really messed things up! Help!**   

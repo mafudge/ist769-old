@@ -16,9 +16,9 @@
 
 ## In-Class Content
 
-- Slides
+- Class Slides: [B-Foundations.pptx](B-Foundations.pptx)
 
 ## After Class Content
 
-- Complete Lab-B
-- Turn in Homework (See Blackboard Details)
+- Lab: [Lab B](Lab-B.md)
+- Turn in Homework (See Blackboard For Details)

@@ -14,9 +14,9 @@
 
 ## In-Class Content
 
-- Slides
+- Class Slides: [C-Hadoop.pptx](C-Hadoop.pptx)
 
 ## After Class Content
 
-- Complete Lab-C
-- Turn in Homework (See Blackboard Details)
+- Lab: <!--[Lab C](Lab-C.md)-->
+- Turn in Homework (See Blackboard For Details)

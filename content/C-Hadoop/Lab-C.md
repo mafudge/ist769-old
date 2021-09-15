@@ -68,11 +68,11 @@ Consider this section reference. It show how to connect to the various hadoop to
 `beeline> quit;`
 
 
-# Exercises
+# Exercises (7 total)
 
-Try to complete the following exercises. Refer to your nodes, and the class lecture video to help you if you get stuck!
+Try to complete the following exercises. Refer to your nodes, and the class lecture video to help you if you get stuck! You will struggle, but also learn a lot as you complete these exercises!
 
-1. From the `datasets` folder load the `customers/customers.csv`,  `customers/surveys.csv`, and `tweets/tweets.psv` into HDFS. Specifically:  
+Ex 1. From the `datasets` folder load the `customers/customers.csv`,  `customers/surveys.csv`, and `tweets/tweets.psv` into HDFS. Specifically:  
 
   | source | HDFS Location |
   | ----- | ----- |
@@ -82,21 +82,21 @@ Try to complete the following exercises. Refer to your nodes, and the class lect
 
   Record the commands you entered to complete this task. provide a screenshot of evidence these files are in HDFS.
 
-2. Create a Hive database called `labc`. use the database. In `labc` create an external hive table for the `tweets`. Your external table will point to the existing location on HDFS. You will need to view the `tweets.psv` file to see the format of the file in order to correctly setup the fields terminator and columns in the Hive table.  
+ Ex 2. Create a Hive database called `labc`. use the database. In `labc` create an external hive table for the `tweets`. Your external table will point to the existing location on HDFS. You will need to view the `tweets.psv` file to see the format of the file in order to correctly setup the fields terminator and columns in the Hive table.  
 After you create the table write a query to display all of the tweets for a user you've chosen. Please include all commmands you used to complete the task, and provide a screen shot of the query output and the output of a `describe tweets`.
 
 
-3. In the `labc` database, let's create an internal hive table for `customers`. After you create the table, use the `load` command to move the data from the current HDFS location into the Hive data warehouse.   
+Ex 3. In the `labc` database, let's create an internal hive table for `customers`. After you create the table, use the `load` command to move the data from the current HDFS location into the Hive data warehouse.   
 NOTE 1: if you screw up you will need to `drop table` and reload the file back into HDFS from step 1.  
 NOTE 2: there is a header row in this file, you might need to search the Hive docs on the web for how to exclude this first row.   
 When you have created the table and imported the data, provde all the commands you entered to complete the task and a `select` statement showing the table output.
 
-4. Similar to the previous step import the `surveys.csv` into a Hive internal table in the `labc` database called `surveys`.
+Ex 4. Similar to the previous step import the `surveys.csv` into a Hive internal table in the `labc` database called `surveys`.
 When you have created the table and imported the data, provde all the commands you entered to complete the task and a `select` statement showing the table output.
 
-5. Write a Hive QL Query to match a customer to their survey. Make sure to include all columns from customer and survey, and be sure to include customers who did not complete a survey.
+Ex 5. Write a Hive QL Query to match a customer to their survey. Make sure to include all columns from customer and survey, and be sure to include customers who did not complete a survey.
 
-6. Create an Hbase table called `orders` with two column families `order` and `customer`. Add the following data to the table:  
+Ex 6. Create an Hbase table called `orders` with two column families `order` and `customer`. Add the following data to the table:  
 
   | Order Date | Order Amount | Order Handling | Customer Email | Customer City | Customer State |
   | ----- | ----- | ----- | ----- | ----- | ----- |
@@ -106,7 +106,7 @@ When you have created the table and imported the data, provde all the commands y
 
   Provide all the commands you entered to complete the task and include a screenshot of a `scan` of the table data as evidence it was entered.
 
-7. Create a Hive table from the Hbase table. Write a query to total the orders by state. Include all commands you entered to complete the task, and include a screenshot of your query output showing total orders by state.
+Ex 7. Create a Hive table from the Hbase table. Write a query to total the orders by state. Include all commands you entered to complete the task, and include a screenshot of your query output showing total orders by state.
   
 
 

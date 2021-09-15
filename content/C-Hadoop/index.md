@@ -18,5 +18,5 @@
 
 ## After Class Content
 
-- Lab: <!--[Lab C](Lab-C.md)-->
+- Lab: [Lab C](Lab-C.md)
 - Turn in Homework (See Blackboard For Details)

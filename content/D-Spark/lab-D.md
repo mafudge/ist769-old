@@ -200,7 +200,7 @@ Q8: We need to flatten the nested JSON data, use the `select()` function with do
 only showing top 10 rows
 ```
 
-Q11: Time to join the two dataframes together into a new dataframe `comb1`. Use the `join()` function to do this, creating an `"inner"` join mathing `logs4.clientip==ips2.ip`. Here are the top 10 rows:
+Q9: Time to join the two dataframes together into a new dataframe `comb1`. Use the `join()` function to do this, creating an `"inner"` join mathing `logs4.clientip==ips2.ip`. Here are the top 10 rows:
 ```
 +----------+--------+--------------+------+--------------------+-----------+----+--------+-----------+--------------------+--------------------+----------+-----------+-------+--------+-----+---------+----------+
 |      date|    time|      serverip|method|                 uri|querystring|port|username|   clientip|           useragent|            referrer|statuscode|         ip|country|    city|state|      lat|       lng|
@@ -219,9 +219,9 @@ Q11: Time to join the two dataframes together into a new dataframe `comb1`. Use 
 only showing top 10 rows
 ```
 
-Q12: Register the `comb1` dataframe as a Temp SQL View named `loganalysis`. Save the transformed data back to Minio as 'labd/cleaned-logs.json` in JSON format. Make sure to use `mode="overwrite"` in case you need to run it more than once.
+Q10: Register the `comb1` dataframe as a Temp SQL View named `loganalysis`. Save the transformed data back to Minio as 'labd/cleaned-logs.json` in JSON format. Make sure to use `mode="overwrite"` in case you need to run it more than once.
 
-Q13: Let's use `spark.sql` and our table `logfileanalysis` to write some SQL statements. First let's check for errors. provide a count of requests grouped by status code. Are there any errors? If you are not familiar with HTTP status codes, check here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status 
+Q11: Let's use `spark.sql` and our table `logfileanalysis` to write some SQL statements. First let's check for errors. provide a count of requests grouped by status code. Are there any errors? If you are not familiar with HTTP status codes, check here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status 
 
 ```
 +----------+---------------+
@@ -234,7 +234,7 @@ Q13: Let's use `spark.sql` and our table `logfileanalysis` to write some SQL sta
 (sample output... some values omitted)
 ```
 
-Q14: Where do our visitors come from? Write a query to count HTTP requests by city and state. sort by state then city. Which City has the most requests? The least?
+Q12: Where do our visitors come from? Write a query to count HTTP requests by city and state. sort by state then city. Which City has the most requests? The least?
 ```
 +-----+--------------+-----+
 |state|          city|count|

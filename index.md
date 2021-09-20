@@ -10,7 +10,7 @@ Unit | Topic
 A | [Introduction and Reviewing Relational](content/A-Intro/index.md)  
 B | [NoSQL Foundations](content/B-Foundations/index.md)
 C | [Hadoop](content/C-Hadoop/index.md)
-D | Spark
+D | [Spark and Object Storage](content/D-Spark/index.md)
 E | Schema-Free SQL
 F | Document Models
 G | Wide Column Store Models

@@ -1,3 +1,7 @@
 instructors
 ~*
 datasets/nyc311/nyc311-2021.csv
+docker/spark/work/solution-lab-D.ipynb
+docker/spark/work/.ipynb_checkpoints/
+datasets/.minio.sys/
+datasets/labd/

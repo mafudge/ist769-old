@@ -1,6 +1,16 @@
 version: '2'
 
 services:
+  minio-client:
+    image: minio/mc
+    tty: true
+    hostname: mc
+    volumes: 
+      -  ../../datasets:/data 
+    entrypoint: [ 'bin/bash']
+    links:
+      - minio
+
   minio:
     image: minio/minio:latest
     hostname: minio

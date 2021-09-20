@@ -1,4 +1,4 @@
-# IST769 Lab B
+# IST769 Lab C
 ## Hadoop
 
 In this lab we will learn about Hadoop, data processing and storage system for big data.

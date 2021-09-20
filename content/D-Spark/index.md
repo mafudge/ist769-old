@@ -21,5 +21,5 @@
 
 ## After Class Content
 
-- Lab: [Lab d](Lab-D.md)
+- Lab: [Lab D](lab-D.md)
 - Turn in Homework (See Blackboard For Details)

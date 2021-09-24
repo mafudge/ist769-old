@@ -52,9 +52,8 @@ services:
   #   links:
   #     - minio 
   jupyter:
-#    image: jupyter/pyspark-notebook:latest
+    image: ist769/jupyter_pyspark:20210924b 
     #build: ./jupyter
-    image: ist769/spark_jupyter
     environment:
       - GRANT_SUDO=yes
       - JUPYTER_ENABLE_LAB=yes       

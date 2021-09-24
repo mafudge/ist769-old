@@ -20,6 +20,8 @@ services:
       memlock: -1
       nproc: 32768
       nofile: 100000
+    volumes:
+      - cassandra0-data:/var/lib/cassandra
   
   ###############################
   cassandra1:
@@ -39,6 +41,8 @@ services:
       memlock: -1
       nproc: 32768
       nofile: 100000
+    volumes:
+      - cassandra1-data:/var/lib/cassandra
   
   ###############################
   cassandra2:
@@ -58,8 +62,9 @@ services:
       memlock: -1
       nproc: 32768
       nofile: 100000
+    volumes:
+      - cassandra2-data:/var/lib/cassandra
   
-
   #############################
   cassandra-web:
 #    image: basraven/cassandra-web:latest
@@ -92,3 +97,22 @@ services:
     links:
     - cassandra0
 
+  jupyter:
+    image: ist769/jupyter_pyspark:20210924b 
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes       
+    ports:
+      - "8888:8888"
+    volumes: 
+      - ./work:/home/jovyan/work
+      - ../../datasets:/home/jovyan/datasets
+    depends_on:
+      - cassandra0
+    links:
+      - cassandra0
+
+volumes:
+  cassandra0-data:
+  cassandra1-data:
+  cassandra2-data:

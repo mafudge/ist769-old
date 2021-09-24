@@ -10,6 +10,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mongopw
+    volumes:
+      - mongo-volume:/data/db 
 
   mongo-express:
     image: mongo-express:latest
@@ -68,6 +70,7 @@ services:
     links:
       - mongo
 
+
   # sqlpad:
   #   image: sqlpad/sqlpad:6.7.1 #5.6
   #   environment:
@@ -85,5 +88,5 @@ services:
   #   networks:
   #     mongo_net:
 
-# volumes: 
-#   sqlpad-volume:
+volumes: 
+  mongo-volume:

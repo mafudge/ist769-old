@@ -4,7 +4,7 @@ services:
     image: minio/minio:latest
     hostname: minio
     volumes: 
-      -  ./data:/data 
+      -  ../.../datasets:/data 
     command: server /data --console-address ":9001"
     ports:
     - "9000:9000"

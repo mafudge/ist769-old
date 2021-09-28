@@ -11,7 +11,7 @@ A | [Introduction and Reviewing Relational](content/A-Intro/index.md)
 B | [NoSQL Foundations](content/B-Foundations/index.md)
 C | [Hadoop](content/C-Hadoop/index.md)
 D | [Spark and Object Storage](content/D-Spark/index.md)
-E | Schema-Free SQL
+E | [Schema-Free SQL with Drill](content/E-Schemaless-SQL/index.md)
 F | Document Models
 G | Wide Column Store Models
 H | Key-Value Models

@@ -4,7 +4,7 @@ services:
     image: minio/minio:latest
     hostname: minio
     volumes: 
-      -  ../.../datasets:/data 
+      -  ../../datasets:/data 
     command: server /data --console-address ":9001"
     ports:
     - "9000:9000"
@@ -16,14 +16,33 @@ services:
   drill:
     image: apache/drill:1.19.0
     command: /bin/bash
+    volumes:
+      - ./samples:/data
     tty: true
     ports:
     - "8047:8047"
+    - "31010:31010"
     depends_on:
     - minio
     links:
     - minio
 
+  jupyter:
+    image: ist769/jupyter_pyspark:20210924b 
+    #build: ./jupyter
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes       
+    ports:
+      - "8888:8888"
+    volumes: 
+      - ./work:/home/jovyan/work
+      - ../../datasets:/home/jovyan/datasets
+    depends_on:
+      - minio
+    links:
+      - minio
+      
 
 # # version: '3.1'
 

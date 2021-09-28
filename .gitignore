@@ -60,3 +60,4 @@ datasets/.minio.sys/buckets/streaming/.usage-cache.bin
 datasets/.minio.sys/buckets/tweets/.usage-cache.bin
 datasets/.minio.sys/buckets/ufo-sightings/.usage-cache.bin
 docker/mongodb/work/.ipynb_checkpoints/MongoDb-checkpoint.ipynb
+datasets/drill-demo/wine.json

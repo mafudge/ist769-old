@@ -1,6 +1,6 @@
 {
     "type": "file",
-    "connection": "s3a://bucket/",
+    "connection": "s3a://drill-demo/",
     "config": {
       "fs.s3a.access.key": "minio",
       "fs.s3a.secret.key": "SU2orange!",
@@ -8,6 +8,7 @@
       "fs.s3a.connection.ssl.enabled": "false", 
       "fs.s3a.path.style.access": "true"
     },
+    "enabled" : true,
     "workspaces": {
       "root": {
         "location": "/",
@@ -29,7 +30,8 @@
         "extensions": [
           "csv"
         ],
-        "delimiter": ","
+        "delimiter": ",",
+        "extractHeader": true
       },
       "tsv": {
         "type": "text",
@@ -38,13 +40,16 @@
         ],
         "delimiter": "\t"
       },
+      "excel": {
+        "type": "excel"
+      },
       "parquet": {
         "type": "parquet"
       },
       "json": {
         "type": "json",
         "extensions": [
-          "json"
+          "json", "jsn", "jsonfile"
         ]
       },
       "avro": {
@@ -64,7 +69,6 @@
         "extractHeader": true,
         "delimiter": ","
       }
-    },
-    "enabled": true
+    }
   }
   

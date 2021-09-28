@@ -1,0 +1,8 @@
+[
+    { "name" : { "first": "andy" } , 
+      "grades" : [100,90,55] 
+    },
+    { "name" : {"first": "bob" }, 
+      "grades" : [75,90,65] 
+    }
+]

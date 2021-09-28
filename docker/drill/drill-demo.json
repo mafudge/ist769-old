@@ -1,0 +1,56 @@
+{
+    "type": "file",
+    "connection": "s3a://drill-demo/",
+    "config": {
+      "fs.s3a.access.key": "minio",
+      "fs.s3a.secret.key": "SU2orange!",
+      "fs.s3a.endpoint": "http://minio:9000",
+      "fs.s3a.connection.ssl.enabled": "false",
+      "fs.s3a.path.style.access": "true"
+    },
+    "workspaces": {
+      "root": {
+        "location": "/",
+        "writable": true,
+        "defaultInputFormat": null,
+        "allowAccessOutsideWorkspace": false
+      },
+      "stuff": {
+        "location": "/stuff",
+        "writable": true,
+        "defaultInputFormat": null,
+        "allowAccessOutsideWorkspace": true
+      }
+    },
+    "formats": {
+      "tsv": {
+        "type": "text",
+        "extensions": [
+          "tsv"
+        ],
+        "fieldDelimiter": "\t"
+      },
+      "excel": {
+        "type": "excel",
+        "extensions": [
+          "xlsx"
+        ],
+        "lastRow": 1048576
+      },
+      "json": {
+        "type": "json",
+        "extensions": [
+          "json"
+        ]
+      },
+      "csv": {
+        "type": "text",
+        "extensions": [
+          "csv"
+        ],
+        "delimiter": ",",
+        "extractHeader": true
+      }      
+    },
+    "enabled": true
+  }

@@ -44,8 +44,8 @@ The stash will store your changes elsewhere and if needed they can always be rec
 **I need to get updated files from the remote repository!**  
 Throughout the semester you might be asked to get updated files that your instructor has posted to github. To do this, execute:
 ```
-ist769$ git fetch --all`
-ist769$ git reset --hard origin/main` 
+ist769$ git fetch --all
+ist769$ git reset --hard origin/main 
 ```
 
 **I really messed things up! Help!**   

@@ -31,23 +31,26 @@ services:
       - 5000:5000
     depends_on: 
       - mongo
-      
-  mongo-client:
-    image: mongoclient/mongoclient:latest
-    restart: always
-    hostname: mongoclient
-    ports:
-      - 8082:3000
-    environment:
-      MONGOCLIENT_DEFAULT_CONNECTION_URL: mongodb://admin:mongopw@mongo:27017/
-    depends_on: 
-      - mongo
+
+  # Buggy !!!!!
+  # mongo-client:
+  #   image: mongoclient/mongoclient:latest
+  #   restart: always
+  #   hostname: mongoclient
+  #   ports:
+  #     - 8082:3000
+  #   environment:
+  #     MONGOCLIENT_DEFAULT_CONNECTION_URL: mongodb://admin:mongopw@mongo:27017/
+  #   depends_on: 
+  #     - mongo
 
   drill:
     image: apache/drill:1.19.0
     hostname: drill
     command: /bin/bash
     tty: true
+    volumes: 
+      - ../../datasets:/datasets
     ports:
     - "8047:8047"
     depends_on:

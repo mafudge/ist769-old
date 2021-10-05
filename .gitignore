@@ -12,3 +12,4 @@ docker/elasticsearch/work/.ipynb_checkpoints/*
 docker/mongodb/work/.ipynb_checkpoints/*
 datasets/drill-demo/wine.json
 project
+docker/mongodb/work/solution-LabF.ipynb

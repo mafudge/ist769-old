@@ -1,37 +1,14 @@
-## IST769: README
+# IST769: README
 
-You can use the [editor on GitHub](https://github.com/mafudge/ist769/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to IST679: Advanced Big Data Management. In this course you will learn about databases and data management from the big data perspective. Building upon your existing knowledge of SQL and Relational Database management systems, this course will introduce you to several databases and technolgies in the NoSQL / Hadoop / Big Data spaces. You will learn to build complex database objects to support a variety of needs from big data perspective, with emphasis on design, performance, scalability, and security. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What's in this Repository?
 
-### Markdown
+1. The `dontent` folder contains lectures, labs, and readings
+2. The `datasets` folder contains sample data used by the course examples and labs.
+3. The `docker` folder contains the containerized lab environments and sample code.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Website. The course website is available here:
 
-```markdown
-Syntax highlighted code block
+[http://mafudge.github.io/ist769](http://mafudge.github.io/ist769)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mafudge/ist769/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.

@@ -12,11 +12,14 @@ B | [NoSQL Foundations](content/B-Foundations/index.md)
 C | [Hadoop](content/C-Hadoop/index.md)
 D | [Spark and Object Storage](content/D-Spark/index.md)
 E | [Schema-Free SQL with Drill](content/E-Schemaless-SQL/index.md)
-F | Document Models
+F | [Document Models](content/F-Document/index.md)
 G | Wide Column Store Models
 H | Key-Value Models
 I | Graph Models
 J | Search Engine Models
 K | Streaming Models
 
-[The NoSQL Guide](nosql.md)
+
+## Other Links
+
+- [The NoSQL Guide](nosql.md)

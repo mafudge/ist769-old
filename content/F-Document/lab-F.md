@@ -30,7 +30,7 @@ At the end of this lab you should be able to:
 1. The MongoDb Example is at http://localhost:5000/
 1. To access the MongoDb Client: 
 `docker-compose exec mongo mongo -u admin -p mongopw --authenticationDatabase=admin`
-To access the
+
 
 ## Exercises
 

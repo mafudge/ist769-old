@@ -10,7 +10,7 @@
 
 ## Pre-Class Readings
 
-- [16 min read] Introduction to Apache Cassandra’s Architecture [https://dzone.com/articles/introduction-apache-cassandras](https://dzone.com/articles/introduction-apache-cassandras) 
+- [16 min read] Introduction to Apache Cassandra’s Architecture [https://dzone.com/articles/introduction-apache-cassandras](https://dzone.com/articles/introduction-apache-cassandras)
 - [5 min read] Best Practices for Cassandra Data Modeling [https://dzone.com/articles/best-practices-for-cassandra-data-modeling](https://dzone.com/articles/best-practices-for-cassandra-data-modeling)
 - [8 min read] Cassandra Use Cases [https://blog.pythian.com/cassandra-use-cases/](https://blog.pythian.com/cassandra-use-cases/)
 

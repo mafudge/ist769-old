@@ -16,7 +16,7 @@
 
 - Class Slides: [D-Spark-Object-Storage.pptx](D-Spark-Object-Storage.pptx)
 - [Spark Documentation - https://spark.apache.org/docs/latest/](https://spark.apache.org/docs/latest/)
-- [PySpark By Exampls - https://sparkbyexamples.com/pyspark-tutorial/](https://sparkbyexamples.com/pyspark-tutorial/)
+- [PySpark By Example - https://sparkbyexamples.com/pyspark-tutorial/](https://sparkbyexamples.com/pyspark-tutorial/)
 
 
 ## After Class Content

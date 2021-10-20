@@ -1,52 +1,53 @@
-# IST769 Lab F
-## Document Databases With Mongo Db
+# IST769 Lab G
+## Wide Column Databases With Cassandra
 
-In this lab, we will explore Mongo Db, a document database.  
+In this lab, we will explore Apache Cassandra, a wide column database.  
 
 ## Outcomes
 
 At the end of this lab you should be able to:
 
-- Use Apache Spark to Import and Export data
-- CRUD data with Mongo Db Query Language
-- Query Mongo Db data with Drill SQL and The Mongo Query Language
-
+- Use Apache Spark to Import and Export data into Cassandra
+- Make tables and query Cassandra tables with CQL
+- Create indexes and materialized views to improve queries.
 
 
 ## Setup
 
 1. Open the terminal window in your `ist769` folder.
-1. Change the current working directory to `docker/mongodb`:  
-`ist769$ cd docker/mongodb`
-1. Bring up the Drill environment:  
-`mongodb$ docker-compose up -d`
-1. Make sure the 6 containers in this setup are running. `jupyter`, `drill`, `mongo-client`, `mongo-express`, `mongo` (the Database) and the  `sample-app`:  
+1. Change the current working directory to `docker/cassandra`:  
+`ist769$ cd docker/cassandra`
+1. Bring up the environment:  
+`cassandra$ docker-compose up -d`
+1. Make sure the 6 containers in this setup are running. `jupyter`, `drill`, `cassandra-web`, `cassandra0`, `cassandra1`  and `cassandra2` (the three nodes in the Cassandra ring):  
 `spark$ docker-compose ps`
 1. Get the URL with access token for jupyter. It will be a url in the jupyter logs:  
 `spark$ docker-compose logs jupyter`
 1. Log-in to the drill Web UI http://localhost:8047 
 1. Login to the jupyter Web UI http://localhost:8888 
-1. Login to the Express Web UI http://localhost:8081
-1. The MongoDb Example is at http://localhost:5000/
-1. To access the MongoDb Client: 
-`docker-compose exec mongo mongo -u admin -p mongopw --authenticationDatabase=admin`
+1. Login to the Cassandra Web UI http://localhost:8080
+1. To access the Cassandra Shell: 
+`docker-compose exec cassandra0 cqlsh`
 
 
 ## Exercises
 
-**Q1.** Use Spark to load the dataset `datasets/exam-scores/` into a Spark Dataframe and then the `labf` database under the collection `examscores` Read it back out from MongoDb again, and display a screenshot of your code and the output from the `show()`
+For each of the following provide a screenshot as evidence the command was executed. If its an index table, or materialized view include a SELECT statement demonstrating it the command is working as expected. Make sure your name or netid appear in the screenshot. 
 
-**Q2.** Using the Mongo Client, write an MQL Query to display Student Exam score, Class Section, Exam Version, and completion time for those students who completed the exam in under 25 minutes. Sort by exam score with the highest scores first. Show the query and the output in the screenshot.
+## The Problem
 
-**Q3.** Re-Write **Q2** using drill. First configure the storage provider, then write the Drill SQL statement equivalent of Q2. include a screenshot of the SQL and output. 
+ Your employer (weather.com) would like you store weather sensor and forecast data. Wventually you will get readings from 2,000 cities worldwide every minute. That's 2.88 million rows each day and 1 billion rows a year. Since the data does not need to be read immediately when written across all nodes, you decide Cassandra is a good choice for this project! This data will be accessible by users so they can get weather information and historical trends for they cities they live in and visit. This should help you figure out how the data will be queried.
 
-**Q4.** Using the Mongo Client, write an MQL Query to display the execution stats for a query that displays all UFO Signthings in NY. Include a screenshot of the query and the output that displays the number of rows scanned and returned. 
+**Q1.** You decided to start with a sample data set. The dataset contains 7 days of weather information for major US Cities, with one row being weather information for a single city on a single day. Use Spark to load the dataset `/home/jovyan/datasets/weather/weather.json` use `printSchema()` to inspect the schema. 
 
-**Q5.**  Using the Mongo Client, create an index to cover the query in Q4, or any query by state for that matter. Provide code to create the index, and a query that uses the index. Prove the query uses the index by displaying the exeuction stats.
+**Q2.** Take a look at rows of data in the sample data set. Profile the data to determine what should be used as the partition and cluster key:
+ - First: Find the candidate key - which sets of columns are unique for each row?
+ - Next: Of those columns in the candidate key - which one makes the most sense for how the data will most likely be queried? 
 
-**Q6.** Let's explore the power of Drill! Complete the feedback form at http://localhost:5000/ for the following email addresses:
-V1 of the form: ccayne@rhyta.com, rovlight@dayrep.com, sladd@superrito.com  
-V2 of the form: jcase@dayrep.com, akuss@rhyta.com  
-NOTE: Fill in the rest of the fields any way you like.    
-Then  a Drill SQL query to get the, Email, First, Last name, Gender from the `/datasets/customers/customers.csv` file and join that to the information from the feedback form in the Mongodb database.  
-HINT: Use the `dfs` storage plugin. You may have to configure the file type for this plugin.
+**Q3.** Using the CQL Shell, write an CQL Query to create a `daily_city_weather` table. Include all columns in the source data set, and make sure to set your partition and cluster keys. Show the CQL query and the output in the screenshot.
+
+**Q4.** Write spark code to load the json dataframe into your cassandra table. Make sure you have the same number of rows in the dataframe and in the cassandra table. This will be your proof that your cassandra row key is correct. Provide spark code to save the data to cassandra and then a screenshot of a select statement and output in the CQL Shell.  
+
+**Q5.** Write a CQL Shell query to get the condition, description and daytime temperatures for "Syracuse, NY" include all dates.
+
+**Q6.** Your company would like to now allow users to find cities where it is not raining on a specific date. For example, they would like a query to show the city and state name, date, condition and description for only those cities where its not raining. Figure out how you can do with an index or materialized view to avoid a costly ALLOW FILTERING operation that asks all nodes for data. Include your CQL to create the index / materialized view and then include a query demonstrating it works.

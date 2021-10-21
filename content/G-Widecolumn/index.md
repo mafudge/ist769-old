@@ -17,7 +17,7 @@
 
 ## In-Class Content
 
-- Class Slides: [G-Widecolumn.pptx](G-Eidecolumn.pptx)
+- Class Slides: [G-Widecolumn.pptx](G-Widecolumn.pptx)
 - [Pyspark Cassandra - https://github.com/datastax/spark-cassandra-connector/blob/master/doc/15_python.md](https://github.com/datastax/spark-cassandra-connector/blob/master/doc/15_python.md)
 - [The Cassandra Docs - https://cassandra.apache.org/doc/3.11/]https://cassandra.apache.org/doc/3.11/)
 

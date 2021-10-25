@@ -23,3 +23,18 @@ services:
       - 8080:80
     links: 
       - redis       
+
+  jupyter:
+    image: ist769/jupyter_pyspark:20210924b 
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes       
+    ports:
+      - "8888:8888"
+    volumes: 
+      - ./work:/home/jovyan/work
+      - ../../datasets:/home/jovyan/datasets
+    depends_on:
+      - redis
+    links:
+      - redis

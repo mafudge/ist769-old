@@ -20,9 +20,9 @@ At the end of this lab you should be able to:
 1. Bring up the environment:  
 `cassandra$ docker-compose up -d`
 1. Make sure the 6 containers in this setup are running. `jupyter`, `drill`, `cassandra-web`, `cassandra0`, `cassandra1`  and `cassandra2` (the three nodes in the Cassandra ring):  
-`spark$ docker-compose ps`
+`cassandra$ docker-compose ps`
 1. Get the URL with access token for jupyter. It will be a url in the jupyter logs:  
-`spark$ docker-compose logs jupyter`
+`cassandra$ docker-compose logs jupyter`
 1. Log-in to the drill Web UI http://localhost:8047 
 1. Login to the jupyter Web UI http://localhost:8888 
 1. Login to the Cassandra Web UI http://localhost:8080

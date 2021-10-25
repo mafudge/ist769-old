@@ -21,9 +21,9 @@ At the end of this lab you should be able to:
 1. Bring up the Drill environment:  
 `mongodb$ docker-compose up -d`
 1. Make sure the 6 containers in this setup are running. `jupyter`, `drill`, `mongo-client`, `mongo-express`, `mongo` (the Database) and the  `sample-app`:  
-`spark$ docker-compose ps`
+`mongodb$ docker-compose ps`
 1. Get the URL with access token for jupyter. It will be a url in the jupyter logs:  
-`spark$ docker-compose logs jupyter`
+`mongodb$ docker-compose logs jupyter`
 1. Log-in to the drill Web UI http://localhost:8047 
 1. Login to the jupyter Web UI http://localhost:8888 
 1. Login to the Express Web UI http://localhost:8081

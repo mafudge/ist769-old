@@ -19,9 +19,9 @@ At the end of this lab you should be able to:
 1. Bring up the Drill environment:  
 `drill$ docker-compose up -d`
 1. Make sure the 3 containers in this setup are running. `jupyter`, `minio` and `drill`:  
-`spark$ docker-compose ps`
+`drill$ docker-compose ps`
 1. Get the URL with access token for jupyter. It will be a url in the jupyter logs:  
-`spark$ docker-compose logs jupyter`
+`drill$ docker-compose logs jupyter`
 1. Log-in to the drill Web UI https://localhost:8047 
 1. Login to the Minio Web UI https://localhost:9001 
 

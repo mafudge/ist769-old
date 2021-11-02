@@ -16,7 +16,7 @@ E | [Schema-Free SQL with Drill](content/E-Schemaless-SQL/index.md)
 F | [Document Models](content/F-Document/index.md)
 G | [Wide Column Store Models](content/G-Widecolumn/index.md)
 H | [Key-Value Models](content/H-Keyvalue/index.md)
-I | Graph Models
+I | [Graph Models](content/I-Graph/index.md)
 J | Search Engine Models
 K | Streaming Models
 

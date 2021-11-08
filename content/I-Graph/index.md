@@ -9,7 +9,7 @@
 
 ## Pre-Class Readings
 
-- [10 Minutes] What is a graph database? [https://youtu.be/REVkXVxvMQE]https://youtu.be/REVkXVxvMQE)
+- [10 Minutes] What is a graph database? [https://youtu.be/REVkXVxvMQE](https://youtu.be/REVkXVxvMQE)
 - [23 Minutes] Neo4J Cipher tutorial [https://youtu.be/Dmxq90gJ2xE](https://youtu.be/Dmxq90gJ2xE)
 
 

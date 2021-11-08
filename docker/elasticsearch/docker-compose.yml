@@ -6,14 +6,15 @@ services:
     environment:
       - node.name=es01
       - discovery.type=single-node
+      - xpack.security.enabled=false
       # - cluster.name=es-docker-cluster
       # - cluster.initial_master_nodes=es01
-      # - bootstrap.memory_lock=true
-      # - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    # ulimits:
-    #   memlock:
-    #     soft: -1
-    #     hard: -1
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     volumes:
       - data01:/usr/share/elasticsearch/data
     ports:
@@ -62,7 +63,10 @@ services:
     environment:
       ELASTICSEARCH_URL: http://es01:9200
       ELASTICSEARCH_HOSTS: '["http://es01:9200"]'
-
+      ELASTICSEARCH_USERNAME: elastic
+      ELASTICSEARCH_PASSWORD: elasticpw
+      SERVER_SSL_ENABLED: "false"
+      
 
   drill:
     image: apache/drill:1.19.0

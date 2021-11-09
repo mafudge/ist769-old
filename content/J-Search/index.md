@@ -9,17 +9,18 @@
 
 ## Pre-Class Readings
 
-- [10 Minutes] What is a graph database? [https://youtu.be/REVkXVxvMQE]https://youtu.be/REVkXVxvMQE)
-- [23 Minutes] Neo4J Cipher tutorial [https://youtu.be/Dmxq90gJ2xE](https://youtu.be/Dmxq90gJ2xE)
+- [26 Minutes] Elasticsearch for Beginners (Udemy) [https://youtu.be/C3tlMqaNSaI]https://youtu.be/C3tlMqaNSaI)
+- [18 Minutes] Elastic Search API Tutorial [https://stackify.com/elasticsearch-tutorial/](https://stackify.com/elasticsearch-tutorial/)
 
 
 ## In-Class Content
 
-- Class Slides: [I-Graph.pptx](I-Graph.pptx)
-- [Neo4J Apache Spark Connector - https://neo4j.com/developer/spark/](https://neo4j.com/developer/spark/)
-- [Neo4J Cipher Query Language - https://neo4j.com/developer/cypher/](https://neo4j.com/developer/cypher/)
+- Class Slides: [J-Search.pptx](J-Search.pptx)
+- [Kibana Canvas - https://www.elastic.co/guide/en/kibana/current/canvas.html](https://www.elastic.co/guide/en/kibana/current/canvas.html)
+- [Kibana Dashboards - https://www.elastic.co/guide/en/kibana/current/dashboard.html](https://www.elastic.co/guide/en/kibana/current/dashboard.html)
+- [PySpark Connector - https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html#spark-python](https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html#spark-python)
 
 ## After Class Content
 
-- Lab: [Lab I](lab-I.md)
+- Lab: [Lab J](lab-J.md)
 - Turn in Homework (See Blackboard For Details)

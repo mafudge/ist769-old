@@ -1,31 +1,31 @@
-# IST769 Lab I
-## Graph Databases With Neo4j
+# IST769 Lab J
+## Search Databases With the Elastic Stack
 
-In this lab, we will explore Neo4j, a Graph database. 
+In this lab, we will explore Elastic search and the Elastic stack. 
 
 ## Outcomes
 
 At the end of this lab you should be able to:
 
-- Use Apache Spark to Import and Export data into Neo4j
-- Build Graph Models in Neo4j 
-- Write Cipher Queries to retrieve Graph Data 
+- Use Apache Spark to Import and Export data into Elasticsearch
+- Query Data with the Kibana query language.
+- Build Maps, Canvas and Dashboards in Kibana
 
 ## Setup
 
 1. Open the terminal window in your `ist769` folder.
-1. Change the current working directory to `docker/neo4j`:  
-`ist769$ cd docker/neo4j`
+1. Change the current working directory to `docker/elasticsearch`:  
+`ist769$ cd docker/elasticsearch`
 1. Bring up the environment:  
-`neo4j$ docker-compose up -d`
-1. Make sure the 2 containers in this setup are running. `jupyter`,   and `neo4j`:  
+`elasticsearch$ docker-compose up -d`
+1. Make sure the 4 containers in this setup are running. `es01`,`kb01`,`jupyter`, and `drill`:  
 `neo4j$ docker-compose ps`
 1. Get the URL with access token for jupyter. It will be a url in the jupyter logs:  
 `neo4j$ docker-compose logs jupyter`
-1. Log-in Neo4j http://localhost:7474 
+1. Log-in to Kibana http://localhost:5601
 1. Login to the jupyter Web UI http://localhost:8888 
 
-**NOTE:** It takes a while for Neo4j to start.... it's a Java app so docker returns UP before it loads completely. Be patient!
+**NOTE:** It takes a while for Elastic to start.... it's a Java app so docker returns UP before it loads completely. Be patient!
 
 ## Exercises
 
@@ -33,14 +33,14 @@ For each of the following provide a screenshot as evidence the commands were exe
 
 ## Questions
 
-**Q1.** Using the `:play northwind-graph` command, load the **Product Catalog** nodes and relationships. This should just be a matter of following the commands in the first 3 steps of the Northwind graph. As proof you've completed this correctly, write a Cipher query to display all Products, Suppliers and Categories using both relationships. Your screenshot should include your Cipher code plus the graph output. If you did it correctly there should be 191 nodes and 309 relationships
+**Q1.** Write PySpark to load the 1,600 line weather data set into Elasticsearch under the index `weather` with default index type. 
 
-**Q2.** For contact `Petra Winkler`, write a Cipher query to display the company name, product name and unit price of products that are not discontinued. There should be 6 products displayed in the table.
+**Q2.** Use a `curl` command from the command line to hit the Elasticsearch API and demostrate that there are 1,600 documents in the `weather` index. 
 
-**Q3.** Write a Cipher query to display a graph of product categories from suppilers in the USA. Make sure the screenshot of your graph emphasizes the product category with more than one supplier.
+**Q3.** Setup a `weather` index pattern in Kibana based on the `weather` index from elasticsearch. MAke sure you have a `geo_point` type and have selected a `@timestamp` field using the date field. Provide a screenshot including the fields in question.
 
-**Q4.** You just sold 30 units of `laughing lumberjack lager` update the node to reflect the proper stock and display the output.
+**Q4.** Create a Kibana map displaying the weather locations. Use any layer(s) of data you wish. Provide a screenshot of the map with data points on it. 
 
-**Q5.** Using the Movie graph, write a Cipher query to get the Movie title and release date, and Actor name of any actor who played the role of `"Neo"`.  of Load the following data into a Spark dataframe: You just sold 30 units of `laughing lumberjack lager` update the node to reflect the proper stock and display the output.
+**Q5.** Create a Kibana dashboard which when you select a city, will display the average day time and night time temperature for that city, in addition to a line chart of the the average daily high and lows for all data on that city. . Provide a screenshot of the dashboard.
 
-**Q6** Load all Northind products with category name into a Spark data frame. 
+**Q6.** Create a Kibana Canvas! Display at least 2 metrics and 2 charts. Decide which data you want to display and how you would like to present it. Provide a screenshot of the Canvas.

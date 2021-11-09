@@ -17,7 +17,7 @@ F | [Document Models](content/F-Document/index.md)
 G | [Wide Column Store Models](content/G-Widecolumn/index.md)
 H | [Key-Value Models](content/H-Keyvalue/index.md)
 I | [Graph Models](content/I-Graph/index.md)
-J | Search Engine Models
+J | [Search Engine Models](content/J-Search/index.md)
 K | Streaming Models
 
 

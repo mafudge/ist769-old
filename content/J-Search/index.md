@@ -9,8 +9,8 @@
 
 ## Pre-Class Readings
 
-- [26 Minutes] Elasticsearch for Beginners (Udemy) [https://youtu.be/C3tlMqaNSaI]https://youtu.be/C3tlMqaNSaI)
-- [18 Minutes] Elastic Search API Tutorial [https://stackify.com/elasticsearch-tutorial/](https://stackify.com/elasticsearch-tutorial/)
+- [26 Minutes] Elasticsearch for Beginners (Udemy)- [https://youtu.be/C3tlMqaNSaI](https://youtu.be/C3tlMqaNSaI)
+- [18 Minutes] Elastic Search API Tutorial - [https://stackify.com/elasticsearch-tutorial/](https://stackify.com/elasticsearch-tutorial/)
 
 
 ## In-Class Content

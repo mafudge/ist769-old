@@ -37,7 +37,7 @@ max_speed = 1
 min_speed = 10
 error_rate_pct = 2
 over_100_pct = 25
-producer = KafkaProducer(bootstrap_servers= ['broker:9092', 'localhost:29092'])
+producer = KafkaProducer(bootstrap_servers= ['broker:29092', 'localhost:9092'])
 
 # main stream of writes.
 try:

@@ -1,0 +1,13 @@
+{
+    "type": "kafka",
+    "kafkaConsumerProps": {
+      "key.deserializer": "org.apache.kafka.common.serialization.ByteArrayDeserializer",
+      "auto.offset.reset": "earliest",
+      "bootstrap.servers": "broker:29092",
+      "group.id": "*",
+      "enable.auto.commit": "true",
+      "value.deserializer": "org.apache.kafka.common.serialization.ByteArrayDeserializer",
+      "session.timeout.ms": "30000"
+    },
+    "enabled": true
+  }

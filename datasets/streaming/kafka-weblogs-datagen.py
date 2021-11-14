@@ -34,7 +34,7 @@ user_list = [
 locations = ['/', '/about', '/products', '/services', '/contact', '/blog', '/', '/', '/blog', '/', '/']
 max_speed = 1
 min_speed = 10
-producer = KafkaProducer(bootstrap_servers= ['broker:9092', 'localhost:29092'])
+producer = KafkaProducer(bootstrap_servers= ['broker:29092', 'localhost:9092'])
 
 # main stream of writes.
 try:

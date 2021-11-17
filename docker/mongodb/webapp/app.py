@@ -2,11 +2,13 @@ import logging
 import json
 import datetime
 import pymongo
+import os 
 from flask import Flask, escape, request, render_template, redirect, url_for
 
 app = Flask(__name__)
+connstr = os.environ.get('MONGODB_URI', "mongodb://admin:mongopw@mongo:27017/")
 logging.basicConfig(level=logging.INFO)
-myclient = pymongo.MongoClient("mongodb://admin:mongopw@mongo:27017/")
+myclient = pymongo.MongoClient(connstr)
 mydb = myclient['demo']
 feedbackcollection = mydb['feedback']
 

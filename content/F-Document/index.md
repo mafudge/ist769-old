@@ -18,6 +18,7 @@
 
 - Class Slides: [F-Document.pptx](F-Document.pptx)
 - [The Mongo Db Manual - https://docs.mongodb.com/manual/](https://docs.mongodb.com/manual/)
+- [Mongo Spark Connector - https://docs.mongodb.com/spark-connector/master/python-api/](https://docs.mongodb.com/spark-connector/master/python-api/)
 
 ## After Class Content
 

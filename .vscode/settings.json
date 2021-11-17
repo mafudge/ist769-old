@@ -28,5 +28,5 @@
         "!Split",
         "!Split sequence"
     ],
-    "jupyter.jupyterServerType": "local"
+    "jupyter.jupyterServerType": "remote"
 }

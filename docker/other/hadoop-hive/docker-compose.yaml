@@ -1,6 +1,33 @@
 version: '3'
 services:
+  drill:
+    image: apache/drill:1.19.0
+    container_name: drill
+    command: /bin/bash
+    tty: true
+    ports:
+    - "8047:8047"
+    - "31010:31010"
+    ulimits:
+      memlock: -1
+      nproc: 32768
+      nofile: 100000
 
+  #jupyter - TODO CLIENT INSTALLS AND Spark CONFIGS#
+  jupyter:
+    image: ist769/jupyter_pyspark:20210924b 
+    container_name: jupyter
+    environment:
+      - GRANT_SUDO=yes
+      - JUPYTER_ENABLE_LAB=yes       
+    ports:
+      - "8888:8888"
+    volumes: 
+      - ./work:/home/jovyan/work
+      - ../../../datasets:/home/jovyan/datasets
+    env_file:
+      - ./hadoop-hive.env
+    
   namenode:
     image: bde2020/hadoop-namenode:2.0.0-hadoop2.7.4-java8
     container_name: namenode
@@ -8,6 +35,7 @@ services:
       - hdfs-namenode:/hadoop/dfs/name
     environment:
       - CLUSTER_NAME=hive
+      - hadoop-config:/etc/hadoop:rw
     env_file:
       - ./hadoop-hive.env
     ports:
@@ -68,3 +96,8 @@ volumes:
   metastore-postgresql:
   hdfs-datanode:
   hdfs-namenode:
+
+
+networks:
+  default:
+    name: foo

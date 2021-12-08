@@ -7,6 +7,7 @@ services:
   #drill#
   drill:
     image: apache/drill:1.19.0
+    hostname: drill
     command: /bin/bash
     tty: true
     ports:
@@ -17,7 +18,7 @@ services:
       nproc: 32768
       nofile: 100000
 
-  #jupyter - TODO CLIENT INSTALLS AND Spark CONFIGS#
+  #jupyter#
   jupyter:
     image: ist769/jupyter_pyspark:20210924b 
     hostname: jupyter
@@ -28,7 +29,10 @@ services:
       - "8888:8888"
     volumes: 
       - ./work:/home/jovyan/work
-      - ../../datasets:/home/jovyan/datasets
+      - ../../../datasets:/home/jovyan/datasets
+    env_file:
+      - ./hadoop-hive.env
+
 
   #mongoexpress#
   mongoexpress:
@@ -56,7 +60,6 @@ services:
       - 8882:8081
     depends_on: 
       - redis 
-
 
 
   ### database servers ###  
@@ -199,6 +202,7 @@ services:
       - ./hadoop-hive.env
     ports:
       - "50070:50070"
+      
   datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
     hostname: datanode
@@ -212,11 +216,10 @@ services:
       - namenode
     ports:
       - "50075:50075"
+
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
     hostname: hive-server
-#    volumes:
-#      - ./employee:/employee
     env_file:
       - ./hadoop-hive.env
     environment:
@@ -457,8 +460,9 @@ volumes:
 ##### networks #####
 networks:
   default:
+    name: local
     driver: bridge
     ipam:
       config:
-        - subnet: 10.11.12.0/24
-          gateway: 10.11.12.1
+        - subnet: 10.10.10.0/24
+          gateway: 10.10.10.1

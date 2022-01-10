@@ -4,9 +4,7 @@ Welcome to IST679: Advanced Big Data Management. In this course you will learn a
 
 ## What's in this Repository?
 
-1. The `dontent` folder contains lectures, labs, and readings
-2. The `datasets` folder contains sample data used by the course examples and labs.
-3. The `docker` folder contains the containerized lab environments and sample code.
+The `content` folder contains lectures, labs, and readings
 
 ## Website. The course website is available here:
 

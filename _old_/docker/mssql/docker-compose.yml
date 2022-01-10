@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mssql:
+    image: "azure-sql-edge:latest"
+    #build: mssql/.
+    container_name: mssql
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=SU2Orange!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+volumes:
+  mssql-data:
